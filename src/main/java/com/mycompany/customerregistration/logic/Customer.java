@@ -1,5 +1,6 @@
 package com.mycompany.customerregistration.logic;
 
+import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 import javax.persistence.CascadeType;
@@ -13,7 +14,7 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
 @Entity
-public class Customer {
+public class Customer implements Serializable {
     
     @Id
     @GeneratedValue( strategy = GenerationType.SEQUENCE )

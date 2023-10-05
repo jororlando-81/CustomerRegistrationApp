@@ -1,5 +1,6 @@
 package com.mycompany.customerregistration.logic;
 
+import java.io.Serializable;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -9,7 +10,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
 @Entity
-public class Phone {
+public class Phone implements Serializable {
     
     @Id
     @GeneratedValue( strategy = GenerationType.SEQUENCE )

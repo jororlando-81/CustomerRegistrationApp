@@ -33,7 +33,6 @@ public class DisplayAddress extends javax.swing.JFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         table = new javax.swing.JTable();
         btnEdit = new javax.swing.JButton();
-        TXT = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         btnContinue = new javax.swing.JButton();
 
@@ -86,7 +85,6 @@ public class DisplayAddress extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(btnContinue)
-                            .addComponent(TXT, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btnEdit, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(73, 73, 73)
@@ -101,9 +99,7 @@ public class DisplayAddress extends javax.swing.JFrame {
                         .addGap(88, 88, 88)
                         .addComponent(btnEdit)
                         .addGap(42, 42, 42)
-                        .addComponent(btnContinue)
-                        .addGap(36, 36, 36)
-                        .addComponent(TXT, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(btnContinue))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(15, 15, 15)
                         .addComponent(jLabel1)
@@ -168,7 +164,6 @@ public class DisplayAddress extends javax.swing.JFrame {
    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField TXT;
     private javax.swing.JButton btnContinue;
     private javax.swing.JButton btnEdit;
     private javax.swing.JLabel jLabel1;
@@ -197,7 +192,6 @@ public class DisplayAddress extends javax.swing.JFrame {
         
         Customer customer = controller.findCustumer(id) ;
           
-        TXT.setText( String.valueOf(id)  );
         
         if ( listAddress != null)  { 
             

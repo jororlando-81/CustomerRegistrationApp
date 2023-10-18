@@ -57,7 +57,7 @@ public class ControllerLogic {
 
     public String checkUser(String user, String password) {
        
-         String message = "" ; 
+        String message = "User not found" ; 
        
         List<User> listUser = controllerPersistence.findUser();
         

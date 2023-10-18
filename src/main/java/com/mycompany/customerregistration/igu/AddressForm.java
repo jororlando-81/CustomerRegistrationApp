@@ -13,6 +13,8 @@ public class AddressForm extends javax.swing.JFrame {
         initComponents();
         
         controller = new ControllerLogic();
+        
+        lbWarning.setVisible(false);
     }
 
     
@@ -29,6 +31,7 @@ public class AddressForm extends javax.swing.JFrame {
         txtCity = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         txtIdentification = new javax.swing.JTextField();
+        lbWarning = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -45,7 +48,29 @@ public class AddressForm extends javax.swing.JFrame {
             }
         });
 
+        txtStreet.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                txtStreetFocusLost(evt);
+            }
+        });
+
+        txtCity.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                txtCityFocusLost(evt);
+            }
+        });
+
         jLabel4.setText("Identification");
+
+        txtIdentification.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                txtIdentificationFocusLost(evt);
+            }
+        });
+
+        lbWarning.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
+        lbWarning.setForeground(new java.awt.Color(204, 0, 0));
+        lbWarning.setText("This field is required (*) ");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -53,37 +78,41 @@ public class AddressForm extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addGroup(jPanel1Layout.createSequentialGroup()
-                            .addGap(100, 100, 100)
-                            .addComponent(txtStreet, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                            .addGap(37, 37, 37)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(jPanel1Layout.createSequentialGroup()
-                                    .addComponent(jLabel2)
-                                    .addGap(0, 0, Short.MAX_VALUE))
-                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jLabel3)
-                                        .addComponent(jLabel4))
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(txtCity, javax.swing.GroupLayout.DEFAULT_SIZE, 97, Short.MAX_VALUE)
-                                        .addComponent(txtIdentification))))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(146, 146, 146)
-                        .addComponent(jLabel1))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                                .addGap(37, 37, 37)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(jLabel2)
+                                        .addGap(0, 0, Short.MAX_VALUE))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabel3)
+                                            .addComponent(jLabel4))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addComponent(txtCity, javax.swing.GroupLayout.DEFAULT_SIZE, 97, Short.MAX_VALUE)
+                                            .addComponent(txtIdentification)))))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(100, 100, 100)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel1)
+                                    .addComponent(txtStreet, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(19, 19, 19)
+                        .addComponent(lbWarning))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(130, 130, 130)
                         .addComponent(btnSubmit)))
-                .addContainerGap(168, Short.MAX_VALUE))
+                .addContainerGap(119, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(32, 32, 32)
-                .addComponent(jLabel1)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(lbWarning))
                 .addGap(43, 43, 43)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(txtStreet, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -123,32 +152,87 @@ public class AddressForm extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitActionPerformed
-          
-        String street = txtStreet.getText() ;
-        String city = txtCity.getText() ;
-        String identification = txtIdentification.getText() ;
         
+        try {
         
-        int id  = controller.checkIdentification( identification );
-    
-        if ( id != 0 ) { 
+            String street = txtStreet.getText() ;
+            String city = txtCity.getText() ;
+            String identification = txtIdentification.getText() ;   
+        
+            boolean resultCheck = checkInput ( street ,  city , identification ) ;  
             
-            controller.createAddress( street , city , id );
+            if ( resultCheck ) {
+                
+                        JOptionPane.showMessageDialog(this, "Please complete all fields" , "Error" , JOptionPane.WARNING_MESSAGE );
+       
+                        lbWarning.setVisible(true);
+            
+            }else {
+                    
+                   int id  = controller.checkIdentification( identification );
+            
+                   if ( id != 0 ) { 
+            
+                        controller.createAddress( street , city , id );
                        
-            JOptionPane.showMessageDialog( null , "Save");  
+                        JOptionPane.showMessageDialog( null , "Save");  
         
-            Menu menu = new Menu();
-            menu.setVisible(true);
-            menu.setLocationRelativeTo(null);
-            this.dispose();
+                        Menu menu = new Menu();
+                        menu.setVisible(true);
+                        menu.setLocationRelativeTo(null);
+                        this.dispose();
             
-        }else{ 
+                    }else{ 
             
-            JOptionPane.showMessageDialog( null , "Identification not found"); 
-    }
+                        JOptionPane.showMessageDialog( null , "Identification not found");
+            
+                        }
+                }
         
-              
+        }catch (Exception e) {
+                
+                JOptionPane.showMessageDialog( null , "Something went wrong, check if all form fields are filled in correctly" );   
+        }      
     }//GEN-LAST:event_btnSubmitActionPerformed
+
+    private void txtStreetFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtStreetFocusLost
+        
+        if ( txtStreet.getText().trim().isEmpty() ) {
+            
+            lbWarning.setVisible(true);
+        
+        } else{
+           
+            lbWarning.setVisible(false);
+        }
+        
+    }//GEN-LAST:event_txtStreetFocusLost
+
+    private void txtCityFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtCityFocusLost
+        
+        if ( txtCity.getText().trim().isEmpty() ) {
+            
+            lbWarning.setVisible(true);
+        
+        } else{
+           
+            lbWarning.setVisible(false);
+        }
+        
+    }//GEN-LAST:event_txtCityFocusLost
+
+    private void txtIdentificationFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtIdentificationFocusLost
+        
+        if ( txtIdentification.getText().trim().isEmpty() ) {
+            
+            lbWarning.setVisible(true);
+        
+        } else{
+           
+            lbWarning.setVisible(false);
+        }
+        
+    }//GEN-LAST:event_txtIdentificationFocusLost
 
     
 
@@ -159,8 +243,22 @@ public class AddressForm extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel lbWarning;
     private javax.swing.JTextField txtCity;
     private javax.swing.JTextField txtIdentification;
     private javax.swing.JTextField txtStreet;
     // End of variables declaration//GEN-END:variables
+
+    private boolean checkInput(String street, String city, String identification) {
+        
+        if ( street.trim().isEmpty() || city.trim().isEmpty()  
+                || identification.trim().isEmpty() ) {
+            
+            return true ;
+       
+        }else{
+        
+            return false ;
+        }
+    }
 }

@@ -33,7 +33,6 @@ public class DisplayPhones extends javax.swing.JFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         table = new javax.swing.JTable();
         btnEdit = new javax.swing.JButton();
-        TXT = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         btnContinue = new javax.swing.JButton();
 
@@ -86,8 +85,7 @@ public class DisplayPhones extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(btnEdit, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnContinue)
-                            .addComponent(TXT, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(btnContinue)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(82, 82, 82)
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -103,9 +101,7 @@ public class DisplayPhones extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(btnEdit)
                         .addGap(30, 30, 30)
-                        .addComponent(btnContinue)
-                        .addGap(34, 34, 34)
-                        .addComponent(TXT, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(btnContinue))
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(35, Short.MAX_VALUE))
         );
@@ -166,7 +162,6 @@ public class DisplayPhones extends javax.swing.JFrame {
    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField TXT;
     private javax.swing.JButton btnContinue;
     private javax.swing.JButton btnEdit;
     private javax.swing.JLabel jLabel1;
@@ -195,7 +190,6 @@ public class DisplayPhones extends javax.swing.JFrame {
         
         Customer customer = controller.findCustumer(id) ;
           
-        TXT.setText( String.valueOf(id)  );
         
         if ( listPhones != null)  { 
             

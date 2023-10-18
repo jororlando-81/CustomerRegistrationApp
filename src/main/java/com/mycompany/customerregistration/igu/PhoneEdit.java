@@ -123,11 +123,7 @@ public class PhoneEdit extends javax.swing.JFrame {
         
     int dd   = Integer.parseInt(txtDD.getText()  ) ;
     int number = Integer.parseInt( txtNumber.getText()  ) ;
-    //String identification = txtIdentification.getText() ;
     
-    //int id  = controller.checkIdentification( identification );
-    
-    //if ( id != 0 ) { 
         
         controller.editPhone( id , idPhone , dd, number) ; 
      
@@ -138,10 +134,7 @@ public class PhoneEdit extends javax.swing.JFrame {
         displayAddress.setLocationRelativeTo(null) ;
         this.dispose();
         
-  //  }else{ 
-       
-    //    JOptionPane.showMessageDialog( null , "Identification not found"); 
-   // }
+ 
     
     }//GEN-LAST:event_btnSubmitActionPerformed
 

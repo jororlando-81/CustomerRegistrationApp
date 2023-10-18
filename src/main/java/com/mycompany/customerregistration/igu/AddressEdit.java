@@ -72,15 +72,15 @@ public class AddressEdit extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(36, 36, 36)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnSubmit)
-                            .addComponent(txtCity, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(btnSubmit))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel1)
-                            .addComponent(txtStreet, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(149, Short.MAX_VALUE))
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(txtCity, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(txtStreet, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 103, Short.MAX_VALUE)))))
+                .addContainerGap(168, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -124,11 +124,7 @@ public class AddressEdit extends javax.swing.JFrame {
         
     String street  = txtStreet.getText()   ;
     String city = txtCity.getText()   ;
-    //String identification = txtIdentification.getText() ;
-    
-    //int id  = controller.checkIdentification( identification );
-    
-    //if ( id != 0 ) { 
+   
         
         controller.editAddress( id , idAddress , street , city ) ; 
      
@@ -139,10 +135,7 @@ public class AddressEdit extends javax.swing.JFrame {
         display.setLocationRelativeTo(null) ;
         this.dispose();
         
-  //  }else{ 
-       
-    //    JOptionPane.showMessageDialog( null , "Identification not found"); 
-   // }
+ 
     
     }//GEN-LAST:event_btnSubmitActionPerformed
 

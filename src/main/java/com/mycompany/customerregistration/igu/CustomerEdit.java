@@ -257,12 +257,7 @@ public class CustomerEdit extends javax.swing.JFrame {
         
         txtName.setText( customer.getName()  );
         txtIdentification.setText( customer.getIdentification() );
-      //  txtStreet.setText( customer.getAddress().getStreet()  );
-       // txtCity.setText( customer.getAddress().getCity()  );
-       // txtDD.setText(  String.valueOf( customer.getPhoneList().get(0).getDd() )  );
-       // txtDD2.setText( String.valueOf( customer.getPhoneList().get(1).getDd() )  );
-       // txtNumber.setText( String.valueOf( customer.getPhoneList().get(0).getNumber() )  );
-        //txtNumber2.setText( String.valueOf( customer.getPhoneList().get(1).getNumber() )  );
+      
         
         if ( customer.getMaritalstatus().equals("Single") ) {
             cmbMaritalStatus.setSelectedIndex(1);

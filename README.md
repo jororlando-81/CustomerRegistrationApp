@@ -10,3 +10,15 @@ Project developed for customer information management, through a desktop applica
 
 ![diagram](https://github.com/jororlando-81/assets/blob/main/EER_DiagramCustomerRegistration.png) 
 
+
+## Testing endpoints with Postman
+
+
+### Creating a User
+
+![diagram](https://github.com/jororlando-81/assets/blob/main/createUser.png)
+
+
+### Validation customer's form
+
+![diagram](https://github.com/jororlando-81/assets/blob/main/ValidationFormCusomer.png)

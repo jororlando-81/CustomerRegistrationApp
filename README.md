@@ -8,5 +8,5 @@ Project developed for customer information management, through a desktop applica
 
 ## Entity Relationship diagram
 
-![diagram](https://github.com/jororlando-81/assets/blob/main/customer%20management.mwb) 
+![diagram](https://github.com/jororlando-81/assets/blob/main/EER_DiagramCustomerRegistration.png) 
 

@@ -54,17 +54,17 @@ Project developed for customer information management, through a desktop applica
  
 ![diagram](https://github.com/jororlando-81/assets/blob/main/EditCustomer4.png)
 
-## viewing data in phpMyAdmin
+## Viewing data in phpMyAdmin
 
 ###  User table
 
 ![diagram](https://github.com/jororlando-81/assets/blob/main/DataBase4.png)
 
-###  Address table
+###  Address table, one to one relations between Address and Customer
 
 ![diagram](https://github.com/jororlando-81/assets/blob/main/DataBase2.png)
 
-###  Customer table, one to one relations between Customer and Adrress
+###  Customer table
 
 ![diagram](https://github.com/jororlando-81/assets/blob/main/DataBase1.png)
 

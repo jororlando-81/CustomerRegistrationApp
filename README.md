@@ -72,4 +72,26 @@ Project developed for customer information management, through a desktop applica
 
 ![diagram](https://github.com/jororlando-81/assets/blob/main/DataBase3.png)
 
+# Applied technologies
+
+## Back end
+
+- Diagrama de entidade e relacionamento ( MySQL Workbench )
+- IDE NetBeans
+- Java
+- JPA  ( Java persistence API )
+- Hibernate
+- Git 
+- GitHub 
+- Swing
+- Maven
+- MySQL
+- Xampp
+- PhpMyAdmin
+
+# Author
+
+Jorge Orlando Rodriguez
+
+www.linkedin.com/in/jorge-rodriguez-575b40259
 

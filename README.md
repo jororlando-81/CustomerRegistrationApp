@@ -40,3 +40,16 @@ Project developed for customer information management, through a desktop applica
  
 ![diagram](https://github.com/jororlando-81/assets/blob/main/phoneSalved.png)
 
+### Viewing data and editing
+ 
+![diagram](https://github.com/jororlando-81/assets/blob/main/EditCustomer1.png)
+
+![diagram](https://github.com/jororlando-81/assets/blob/main/EditCustomer2.png)  
+
+### Editing phones
+ 
+![diagram](https://github.com/jororlando-81/assets/blob/main/EditCustomer3.png)
+
+### Editing address
+ 
+![diagram](https://github.com/jororlando-81/assets/blob/main/EditCustomer4.png)

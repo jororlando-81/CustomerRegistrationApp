@@ -78,7 +78,7 @@ Project developed for customer information management, through a desktop applica
 
 - Diagrama de entidade e relacionamento ( MySQL Workbench )
 - IDE NetBeans
-- Java
+- Java SE
 - JPA  ( Java persistence API )
 - Hibernate
 - Git 
